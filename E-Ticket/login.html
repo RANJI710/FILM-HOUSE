@@ -1,0 +1,59 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration Form</title>
+  </head>
+
+  <body>
+    <section>
+      <div class="login-container">
+        <h2>REGISTER</h2>
+
+        <form action="index.html" name="f1" onsubmit="return isCrct()">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <input required type="email" id="email">
+            <label for="email">✉️ Email Id </label>
+          </div>
+  
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+
+            <input required type="password" name="pass">
+            <label for="pass">Password</label>
+          </div>
+  
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox"> Check
+            </label>
+  
+            <a href="#">Forget password</a>
+          </div>
+
+         <button onclick="isCrct()" >LOGIN</button>
+          
+        </form>
+        <script>
+          function isCrct(){
+            pas=document.f1.pass.value;
+            if(pas.length<8){
+              alert("Minimum 8 letters");
+              return false;
+            }
+           
+          }
+        </script>
+        
+      </div>
+    </section>
+  </body>
+</html>
